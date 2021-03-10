@@ -1,0 +1,39 @@
+<?php
+
+
+class UserModel extends BaseModel
+{
+    private $userRepository;
+
+    function __construct(){
+        $this->userRepository=new UserRepository();
+    }
+
+    public function viewByUsernameAndPassword($username, $password) {
+        return $this->userRepository->getByUsernameAndPassword($username, $password);
+    }
+    public function view($id)
+    {
+        // TODO: Implement view() method.
+    }
+
+    public function listAll()
+    {
+        // TODO: Implement listAll() method.
+    }
+
+    public function update($id)
+    {
+        // TODO: Implement update() method.
+    }
+
+    public function delete($id)
+    {
+        // TODO: Implement delete() method.
+    }
+
+    public function create($data)
+    {
+        return $this->userRepository->create($data);
+    }
+}
